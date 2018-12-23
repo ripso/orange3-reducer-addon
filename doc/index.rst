@@ -11,7 +11,7 @@ Registering widgets
 -------------------
 The My Category category is registered using "orange.widgets" entry point in setup.py,
 which contains category name (My Category) and package that contains the widgets
-(orangecontrib.example.widgets). The packages __init__.py contains category metadata,
+(orangecontrib.reducer.widgets). The packages __init__.py contains category metadata,
 including category ICON, BACKGROUD color and WIDGET_HELP_PATH. The latter can be either
 a local path or a url to a server which hosts the add-on documentation.
 
@@ -32,7 +32,7 @@ widget help pages should be listed on a documentation page inside a section name
 The location of the documentation is set using the "orange.canvas.help" entrypoint. It
 usually points to the constant WIDGET_HELP_PATH in the package containing widgets. The
 constant should list the possible locations of the master page (the one that links to
-all widgets). This example add-on includes three different locations:
+all widgets). This reducer add-on includes three different locations:
   - Development documentation is available for developers that manually build documentation
     using sphinx
   - Locally installed documentation, which is available if the add-on was installed using
@@ -66,4 +66,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

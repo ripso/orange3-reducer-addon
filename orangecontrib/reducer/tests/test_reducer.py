@@ -1,10 +1,10 @@
 import unittest
 from Orange.widgets.tests.base import WidgetTest
 
-from orangecontrib.example.widgets.mywidget import MyWidget
+from orangecontrib.reducer.widgets.mywidget import MyWidget
 
 
-class ExampleTests(unittest.TestCase):
+class ReducerTests(unittest.TestCase):
     def test_addition(self):
         self.assertEqual(1 + 1, 2)
 

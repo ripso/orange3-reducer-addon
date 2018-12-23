@@ -3,6 +3,8 @@ Orange3 Reducer Add-on
 
 This is a reducer add-on for [Orange3](http://orange.biolab.si).
 
+![screenshot](https://github.com/ripso/orange3-reducer-addon/blob/master/screenshot.png)
+
 Installation
 ------------
 

@@ -5,11 +5,11 @@ from os import path, walk
 import sys
 from setuptools import setup, find_packages
 
-NAME = "Orange3 Example Add-on"
+NAME = "Orange3 Reducer Add-on"
 
 VERSION = "0.0.3"
 
-DESCRIPTION = "Add-on containing example widgets"
+DESCRIPTION = "Add-on containing reducer widget"
 LONG_DESCRIPTION = open(path.join(path.dirname(__file__), 'README.md')).read()
 
 LICENSE = "BSD"
@@ -23,8 +23,8 @@ KEYWORDS = (
 PACKAGES = find_packages()
 
 PACKAGE_DATA = {
-    'orangecontrib.example': ['tutorials/*.ows'],
-    'orangecontrib.example.widgets': ['icons/*'],
+    'orangecontrib.reducer': ['tutorials/*.ows'],
+    'orangecontrib.reducer.widgets': ['icons/*'],
 }
 
 DATA_FILES = [
@@ -39,31 +39,31 @@ ENTRY_POINTS = {
     # Entry points that marks this package as an orange add-on. If set, addon will
     # be shown in the add-ons manager even if not published on PyPi.
     'orange3.addon': (
-        'example = orangecontrib.example',
+        'reducer = orangecontrib.reducer',
     ),
     # Entry point used to specify packages containing tutorials accessible
     # from welcome screen. Tutorials are saved Orange Workflows (.ows files).
     'orange.widgets.tutorials': (
         # Syntax: any_text = path.to.package.containing.tutorials
-        'exampletutorials = orangecontrib.example.tutorials',
+        'reducertutorials = orangecontrib.reducer.tutorials',
     ),
 
     # Entry point used to specify packages containing widgets.
     'orange.widgets': (
         # Syntax: category name = path.to.package.containing.widgets
         # Widget category specification can be seen in
-        #    orangecontrib/example/widgets/__init__.py
-        'Examples = orangecontrib.example.widgets',
+        #    orangecontrib/reducer/widgets/__init__.py
+        'Visualize = orangecontrib.reducer.widgets',
     ),
 
     # Register widget help
     "orange.canvas.help": (
-        'html-index = orangecontrib.example.widgets:WIDGET_HELP_PATH',)
+        'html-index = orangecontrib.reducer.widgets:WIDGET_HELP_PATH',)
 }
 
 NAMESPACE_PACKAGES = ["orangecontrib"]
 
-TEST_SUITE = "orangecontrib.example.tests.suite"
+TEST_SUITE = "orangecontrib.reducer.tests.suite"
 
 
 def include_documentation(local_dir, install_dir):
@@ -81,7 +81,7 @@ def include_documentation(local_dir, install_dir):
     DATA_FILES.extend(doc_files)
 
 if __name__ == '__main__':
-    include_documentation('doc/build/html', 'help/orange3-example')
+    include_documentation('doc/build/html', 'help/orange3-reducer')
     setup(
         name=NAME,
         version=VERSION,
