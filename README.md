@@ -30,3 +30,8 @@ After the installation, the widget from this add-on is registered with Orange. T
 use
 
     python -m Orange.canvas
+
+Available methods
+-----
+
+Methods list : "count", "min", "max", "average", "sum"
